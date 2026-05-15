@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body id="body">
+  <div class="weather-card">
+    <div class="input-group">
+      <input type="text" id="locationInput" placeholder="Search city..." />
+      <button onclick="getWeather()">🔍</button>
+    </div>
+
+    <div class="weather-info">
+      <img id="weatherIcon" src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="Weather Icon" />
+      <h1><span id="temperature">--</span>°C</h1>
+      <h2 id="city">City</h2>
+      <div class="details">
+        <p>💧 <span id="humidity">--</span>% Humidity</p>
+        <p>🌬️ <span id="wind">--</span> km/h Wind Speed</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script type="module">
+
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyA7m7xqn_Dd4bss2UlyhlZYCc0GRbMIc-Y",
+    authDomain: "weather-5f1c9.firebaseapp.com",
+    projectId: "weather-5f1c9",
+    storageBucket: "weather-5f1c9.firebasestorage.app",
+    messagingSenderId: "160822292970",
+    appId: "1:160822292970:web:53073388e284eb52f20293",
+    measurementId: "G-QF70NRLKK5"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</body>
+</html>
