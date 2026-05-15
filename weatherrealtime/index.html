@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body id="body">
+  <div class="weather-card">
+    <div class="input-group">
+      <input type="text" id="locationInput" placeholder="Search city..." />
+      <button onclick="getWeather()">🔍</button>
+    </div>
+
+    <div class="weather-info">
+      <img id="weatherIcon" src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="Weather Icon" />
+      <h1><span id="temperature">--</span>°C</h1>
+      <h2 id="city">City</h2>
+      <div class="details">
+        <p>💧 <span id="humidity">--</span>% Humidity</p>
+        <p>🌬️ <span id="wind">--</span> km/h Wind Speed</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
